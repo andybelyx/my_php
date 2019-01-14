@@ -13,7 +13,7 @@ switch ($input) {
 	case $input > 100:
 		print "Thanks, man!";
 		break;
-	case $input:
+	default;
 		print "WHAAAAT???";
 		break;
 }

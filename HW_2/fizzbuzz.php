@@ -7,10 +7,10 @@ $i = 0;
 while ($i++ < $num3) {
 	if (($i % (int)$fizz == 0) && ($i % (int)$buzz == 0)) {
 	print "FB ";
-}elseif ($i % (int)$buzz == 0) {
-	print "B ";
 }elseif ($i % (int)$fizz == 0) {
 	print "F ";
+}elseif ($i % (int)$buzz == 0) {
+	print "B ";
 }else {
 	print "$i ";
 }

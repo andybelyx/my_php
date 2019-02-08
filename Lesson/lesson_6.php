@@ -1,27 +1,23 @@
 <?php
-print "Enter your number apartment:";
+print "Найти в каком подъезде и на каком этаже живет Маша!".PHP_EOL;
 $handle = fopen('php://stdin','r');
-$a = fgets($handle);
+print "Введите количество этажей в доме:";
+$hous = intval(fgets($handle));
+print "Введите количество квартир на этаже:";
+$floor = intval(fgets($handle));
+print "Введите номер квартиры:";
+$room = intval(fgets($handle));
 
+$sum_room = $hous * $floor;
 
-if ($a <= 4) {
-	print "подъезд 1, этаж 1, кв. $a";
-}elseif ($a <= 8) {
-	print "подъезд 1, этаж 2, кв. $a";
-}elseif ($a <= 12) {
-	print "подъезд 1, этаж 3, кв. $a";
-}elseif ($a <= 16) {
-	print "подъезд 2, этаж 1, кв. $a";
-}elseif ($a <= 20) {
-	print "подъезд 2, этаж 2, кв. $a";
-}elseif ($a <= 24) {
-	print "подъезд 2, этаж 3, кв. $a";
-}elseif ($a <= 28) {
-	print "подъезд 3, этаж 1, кв. $a";
-}elseif ($a <= 32) {
-	print "подъезд 3, этаж 2, кв. $a";
-}elseif ($a <= 36) {
-	print "подъезд 3, этаж 3, кв. $a";
+function porch($n,$k) {
+$res = $n / $k;
+if ($n % $k == 0){return $res;
+}elseif ($n % $k != 0) {return (int)$res + 1;}
 }
 
-
+$x = $room - 1;
+$c = $x % $sum_room;
+$b = $c / $floor;
+$fl = (int)$b + 1;
+print "Подъезд ".porch($room,$sum_room).", Этаж $fl, Квартира $room";

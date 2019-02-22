@@ -1,0 +1,1 @@
+select id_film as id,upper(name_flm) as film,budget_doll as budget,year from films where `budget_doll` >= 10000000 and `budget_doll` <= 100000000 and `year` in(1993,1994,1997,1999) and name_flm like 'T%' order by name_flm desc limit 10;

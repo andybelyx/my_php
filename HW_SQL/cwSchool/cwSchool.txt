@@ -1,0 +1,21 @@
+﻿/*Получить запросом:
+	- количество школьников в каждом классе.*/
+
+select count(pupil_name) from pupil left join class using(class_id) where class_name = ('2-Б' and '1-Б'); 
+
+
+
+/*Получить запросом:
+	- список школьников, отсортированный по возрасту, затем по классу.*/
+
+select pupil_name,pupil_age,class_name from pupil left join class using(class_id) order by pupil_age,class_name;
+
+
+
+/*Получить запросом:
+	- количество школьников для каждого возраста, отсортированное по убыванию, показать топ 7 возрастов.*/
+
+select count(pupil_name) from pupil where pupil_age = 7;
+
+select class_name, pupil_name, pupil_age from pupil right join class using(class_id) order by pupil_age desc limit 7;
+

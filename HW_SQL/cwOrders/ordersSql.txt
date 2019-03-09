@@ -1,0 +1,10 @@
+﻿/*показать список всех клиентов, как с заказами, так и без заказов*/
+
+select client_name,address,product_name from orders right join clients using(client_id) left join products using(product_id) ;
+
+
+
+/* Запросом показать : если клиент заказал один и тот же продукт несколько раз, включать его заказ с этим продуктом только один раз*/
+
+select client_name,address,product_name,order_performed from order_details left join clients using(client_id) left join products using(product_id) group by client_name;
+

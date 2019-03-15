@@ -1,0 +1,1 @@
+﻿curl --url https://en.wikipedia.org/wiki/Harry_Potter | grep -o "Harry" |wc -l && curl --url https://en.wikipedia.org/wiki/Harry_Potter | grep -o "Lord" |wc -l && curl --url https://en.wikipedia.org/wiki/Harry_Potter | grep -o "Hogwarts" |wc -l

@@ -1,20 +1,42 @@
 #!/bin/bash
-countHarry=$(curl "$1" | grep -o "$2" | wc -l)
-lineHarry=$(curl "$1" | sed -n "/"$2"/=" | tr '\n' ', ')
+if [[ $1 = "-h" ]];
+then
+	echo -e "Enter your parameter as in the example:\n./Level_3.sh -u http://example.com -w Word -f ~/Desktop/exampleFile"
+	exit
+fi
 
-if [[ -z $1 ]];
+while [ $# -ne 0 ]; do
+      case "$1" in
+        -u)
+          URL=$2
+          ;;
+        -w)
+		  WORD=$2
+		  ;;
+ 		-f)
+		  FILE=$2
+		  ;;
+      esac
+      shift
+    done
+
+
+countHarry=$(curl "$URL" | grep -o "$WORD" | wc -l)
+lineHarry=$(curl "$URL" | sed -n "/"$WORD"/=" | tr '\n' ', ')
+
+if [[ -z $URL ]];
 then
 	echo "Specify the first parameter URL!!"
 fi
 
-if [[ -z $2 ]];
+if [[ -z $WORD ]];
 then
 	echo "Indicate that you are looking for the second parameter!!"
 fi
 
-if [[ -n $3 ]]; 
+if [[ -n $FILE ]]; 
 then
-	echo "$2: $countHarry [$lineHarry]" > $3
+	echo "$WORD: $countHarry [$lineHarry]" > $FILE
 else
 	echo "Specify the path in the third parameter!!"
 fi

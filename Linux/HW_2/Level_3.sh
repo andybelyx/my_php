@@ -21,7 +21,7 @@ while [ $# -ne 0 ]; do
     done
 
 
-countHarry=$(curl "$URL" | grep -o "$WORD" | wc -l)
+countHarry=$(curl "$URL" | grep -c "$WORD")
 lineHarry=$(curl "$URL" | sed -n "/"$WORD"/=" | tr '\n' ', ')
 
 if [[ -z $URL ]];

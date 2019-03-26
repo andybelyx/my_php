@@ -21,8 +21,9 @@ while [ $# -ne 0 ]; do
     done
 
 
-countHarry=$(curl "$URL" | grep -c "$WORD")
-lineHarry=$(curl "$URL" | sed -n "/"$WORD"/=" | tr '\n' ', ')
+countHarry=$(curl --silent "$URL" | grep -c "$WORD")
+lineHarry=$(curl --silent "$URL" | sed -n "/"$WORD"/=" | tr '\n' ', ')
+lineHarry=${lineHarry%?} 
 
 if [[ -z $URL ]];
 then
@@ -36,7 +37,7 @@ fi
 
 if [[ -n $FILE ]]; 
 then
-	echo "$WORD: $countHarry [$lineHarry]" > $FILE
+	echo "$WORD : $countHarry [$lineHarry]" > $FILE
 else
 	echo "Specify the path in the third parameter!!"
 fi

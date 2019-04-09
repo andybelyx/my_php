@@ -10,10 +10,10 @@ abstract class RideOn {
 
 
 class Motorcycle extends RideOn {
-	public $suzuki1000RR;
+	public $suzukiGsxR1000;
 
 	public function drive() {
-		return $this->suzuki1000RR;
+		return $this->suzukiGsxR1000;
 	}
 }
 
@@ -34,7 +34,7 @@ class QuadBike extends RideOn {
 }
 
 $motorcycle = new Motorcycle();
-$motorcycle->suzuki1000RR = ("Suzuki - It's very fast Bike!!");
+$motorcycle->suzukiGsxR1000 = ("Suzuki - It's very fast Bike!!");
 $motorcycle->ride();
 
 $scooter = new Scooter();

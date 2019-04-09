@@ -44,9 +44,11 @@ class Primate extends Mammal{
 	}
 
 
-			public function itIsPrimate() {
-				if (($this->fingerPaw == 5)&&($this->warmBlood == true)&&($this->liveBirths()))  {
-					echo  "   Animal" . PHP_EOL . "Type: ". $this->infoType($this->type) . PHP_EOL ."Class: ". $this->infoClass($this->class) . PHP_EOL . "It's primate" . PHP_EOL . "Family: " . $this->stirps . PHP_EOL . "Wool: ";
+		public function itIsPrimate() {
+			if (($this->fingerPaw == 5)&&($this->warmBlood == true)&&($this->
+				liveBirths()))  {
+
+				echo  "   Animal" . PHP_EOL . "Type: ". $this->infoType($this->type) . PHP_EOL ."Class: ". $this->infoClass($this->class) . PHP_EOL . "It's primate" . PHP_EOL . "Family: " . $this->stirps . PHP_EOL . "Wool: ";
 					
 				}
 				else echo "   Animal" . PHP_EOL . "Type: ". $this->infoType($this->type) . PHP_EOL ."Class: ". $this->infoClass($this->class) . PHP_EOL . "It is not primate".PHP_EOL."Wool: ";

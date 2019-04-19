@@ -39,11 +39,14 @@ private $wheelDrive = "FWD";
             	return $this->$var;
         	}
     }
+
 	public function __get($wheelDrives) {
 		if ($wheelDrives == "wheelDrive") {
 			return $this->wheelDrive;
 		}
 	}
+
+	
 
 }
 
@@ -51,7 +54,7 @@ abstract class Info extends Gear {
 		function __toString()  {
 		$info = "Car: " . get_class($this) . PHP_EOL . "Color: " . "{$this->getColor()}" . PHP_EOL;
 		$info .= "Body style: " . "{$this->bodyStyle}" . PHP_EOL;
-		$info .= "Types of drive: " . "{$this->wheelDrive}" . PHP_EOL;
+		$info .= "Type of drive: " . "{$this->wheelDrive}" . PHP_EOL;
 		$info .= "It's fuel consists of: " . "{$this->fuel}" . PHP_EOL;
 		$info .= "Engine power is " . "({$this->power})hp" . PHP_EOL;
 		$info .= "Gear: " . "{$this->gear}. " . "Has " . "({$this->getGearCount()})" . " gears" . PHP_EOL;

@@ -97,11 +97,11 @@ $prius->setGearCount(7);
 $prius->tuningGear('Tiptronic');
 echo $prius;
 
-$BMWm5 = new BMW_M5("Gas", 340, "Automat", "Sedan");
-$BMWm5->setColor('Black');
-$BMWm5->wheelDrive = ("AWD");
-$BMWm5->tuningEngine($engine_V8_4_4Bi_Turbo);
-$BMWm5($nos);
-$BMWm5->setGearCount(7);
-echo $BMWm5;
+$bmwM5 = new BMW_M5("Gas", 340, "Automat", "Sedan");
+$bmwM5->setColor('Black');
+$bmwM5->wheelDrive = ("AWD");
+$bmwM5->tuningEngine($engine_V8_4_4Bi_Turbo);
+$bmwM5($nos);
+$bmwM5->setGearCount(7);
+echo $bmwM5;
 

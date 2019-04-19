@@ -52,13 +52,13 @@ private $wheelDrive = "FWD";
 
 abstract class Info extends Gear {	
 		function __toString()  {
-		$info = "Car: " . get_class($this) . PHP_EOL . "Color: " . "{$this->getColor()}" . PHP_EOL;
-		$info .= "Body style: " . "{$this->bodyStyle}" . PHP_EOL;
-		$info .= "Type of drive: " . "{$this->wheelDrive}" . PHP_EOL;
-		$info .= "It's fuel consists of: " . "{$this->fuel}" . PHP_EOL;
-		$info .= "Engine power is " . "({$this->power})hp" . PHP_EOL;
-		$info .= "Gear: " . "{$this->gear}. " . "Has " . "({$this->getGearCount()})" . " gears" . PHP_EOL;
-		$info .= str_repeat("_",30).PHP_EOL;
+		$info = "Car: " . get_class($this) . PHP_EOL . "Color: " . "{$this->getColor()}" . PHP_EOL
+		 . "Body style: " . "{$this->bodyStyle}" . PHP_EOL
+		 . "Type of drive: " . "{$this->wheelDrive}" . PHP_EOL
+		 . "It's fuel consists of: " . "{$this->fuel}" . PHP_EOL
+		 . "Engine power is " . "({$this->power})hp" . PHP_EOL
+		 . "Gear: " . "{$this->gear}. " . "Has " . "({$this->getGearCount()})" . " gears" . PHP_EOL
+		 . str_repeat("_",30).PHP_EOL;
 		return $info;
 	}
 }

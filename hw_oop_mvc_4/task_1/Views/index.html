@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products</title>
+</head>
+<body>
+    <h1 style="text-align: center">{{greeting}}</h1>
+    <div style="text-align: center; margin-left: 100px;">
+   <table border="1" cellpadding="10" cellspacing="10">
+       <tr>
+           <th>Name</th>
+           <th>Price</th>
+           <th>Weight</th>
+       </tr>
+       {% for product in products %}
+       <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}$</td>
+            <td>{{product.weight}}kg</td>
+       </tr>
+       {% endfor %}
+   </table>
+   </div>
+</body>
+</html>
